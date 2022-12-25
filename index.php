@@ -122,6 +122,36 @@ TEXT;
 
 echo $text;
 
+echo "\n==================\n";
+
+/** NULL */
+
+$x = null;
+echo $x;
+var_dump($x);
+var_dump(is_null($x));
+$x = 123;
+var_dump($x);
+unset($x);
+// var_dump($x);
+
+/** Casting */
+
+$x = null;
+var_dump((string)$x);
+var_dump((bool)$x);
+var_dump((array)$x);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
