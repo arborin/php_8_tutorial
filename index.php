@@ -142,7 +142,34 @@ var_dump((string)$x);
 var_dump((bool)$x);
 var_dump((array)$x);
 
+echo "\n==================\n";
 
+
+/** ARRAYS */
+
+$progLanguage = ['PHP', 'Java', 'Python'];
+var_dump($progLanguage[1]);
+var_dump(isset($progLanguage[12]));
+echo count($progLanguage);
+echo "\n";
+$progLanguage[] = "C++";
+print_r($progLanguage);
+
+// ASSOC ARRAY
+$prog = [
+    'php' => '8.0',
+    'python' => '3.9'
+];
+
+
+print_r($prog['php']);
+
+$arr = [true => 'a', 1 => 'b', '1' => 'c', 1.8 => 'd', null => "empty_string"];
+print_r($arr);
+print_r($arr['']); // empty_string
+
+unset($arr[1]);
+print_r($arr);
 
 
 
