@@ -193,7 +193,29 @@ $x = @file('foo.txt');
 
 # logical operators && || ! and or xor
 
+# array operators + == === != <>
 
+
+
+/** Operator precedence & Associativity */
+
+$x = 5 + 3 * 5;
+
+
+/** control structures  */
+
+# if else elseif else if
+
+if (false) {
+    echo "\nTRUE\n";
+} else {
+    echo "\nFALSE\n";
+}
+
+
+if (true) :
+    echo "\nTest\n";
+endif;
 
 
 
