@@ -172,6 +172,29 @@ unset($arr[1]);
 print_r($arr);
 
 
+/** EXPRESIONS */
+print_r($x = 5);
+
+
+/** OPERATORS */
+
+# arithmetic operators + - * / % **
+
+# Assignment operators = += -= *= /= **=
+
+# string operators . .=
+
+# Comparision operators == === != <> <= =< <=> ?? ?:
+
+# Error control operator
+$x = @file('foo.txt');
+
+# increment/decrement operators ++ --
+
+# logical operators && || ! and or xor
+
+
+
 
 
 
