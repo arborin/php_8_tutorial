@@ -217,6 +217,14 @@ if (true) :
     echo "\nTest\n";
 endif;
 
+/** Loops */
+# while
+
+# do while
+
+# for
+
+# foreach
 
 
 
