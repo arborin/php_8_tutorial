@@ -217,6 +217,7 @@ if (true) :
     echo "\nTest\n";
 endif;
 
+
 /** Loops */
 # while
 
@@ -225,6 +226,23 @@ endif;
 # for
 
 # foreach
+
+
+/** switch */
+
+
+/* mathc */
+
+$payment = 81;
+
+$status = match ($payment) {
+    1 => 'paid',
+    2, 8 => 'default',
+    default => 'unknown payment'
+};
+
+print_r($status);
+
 
 
 
