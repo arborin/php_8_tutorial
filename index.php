@@ -298,6 +298,78 @@ print_r(spread(1, 2, 3, 4, 5));
 
 
 /** named arguments */
+echo "\n";
+print_r(my(x: 5, y: 54));
+
+
+echo "\n";
+
+/** variable scopes */
+$x = 5;
+
+function glob_vars()
+{
+    global $x;
+    echo $x;
+}
+
+
+echo glob_vars();
+echo "\n";
+
+# php stores global variables in GLOBALS
+echo $GLOBALS['x'];
+echo "\n";
+
+
+/** anonymouse & arrow functions */
+
+function summ(int ...$numbers): int
+{
+    return array_sum($numbers);
+}
+
+
+$x = 'summ';
+if (is_callable($x)) {
+    echo $x(1, 2, 3, 4, 58);
+    echo "\n";
+}
+
+# lambda  without name
+$x = 10;
+
+$sum = function (int ...$nums) use ($x): int {
+    echo $x;
+    return array_sum($nums);
+};
+
+# ფუნქციას რომელიც გადაეცემა სხვა ფუნქციას და იქ იძახება 
+# ეწოდება callback ფუნქცია
+
+$new = array_map(function ($element) {
+    return $element * 2;
+}, [1, 2, 3, 4]);
+
+
+print_r($new);
+echo "\n";
+
+/** arraw function */
+
+$array = [1, 2, 3];
+
+$my_arr = array_map(function ($number) {
+    return $number * $number;
+}, [1, 2, 3, 4]);
+
+print_r($my_arr);
+echo "\n";
+
+$array2 = array_map(fn ($number) => $number * $number, [2, 2, 3, 3]);
+print_r($array2);
+
+
 
 
 
