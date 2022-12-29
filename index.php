@@ -259,11 +259,13 @@ print_r($status);
 
 /** functons */
 
+
 function foo(): int|float|array // accept null and integer
 {
     echo "\nHello from function\n";
     return 1.2;
 }
+
 
 function f1(): mixed // return any type
 {
@@ -272,8 +274,30 @@ function f1(): mixed // return any type
 
 foo();
 
+// declare(strict_types=1);
+
+function my(int|float $x, int|float $y = 10): int|float
+{
+    return $x + $y;
+}
+
+print_r(my(5.4, 6));
+echo "\n";
 
 
+function spread(...$numbers): int
+{
+    $sum = 0;
+    foreach ($numbers as $number) {
+        $sum += $number;
+    }
+    return $sum;
+}
+
+print_r(spread(1, 2, 3, 4, 5));
+
+
+/** named arguments */
 
 
 
