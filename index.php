@@ -244,6 +244,35 @@ $status = match ($payment) {
 print_r($status);
 
 
+/** return declare goto */
+
+#declare - ticks
+
+#declare = encoding
+
+# declare = strict_types
+
+
+/** require, require_once, include, include_once */
+
+// require 'file.php';
+
+/** functons */
+
+function foo(): int|float|array // accept null and integer
+{
+    echo "\nHello from function\n";
+    return 1.2;
+}
+
+function f1(): mixed // return any type
+{
+    return "niko";
+}
+
+foo();
+
+
 
 
 
