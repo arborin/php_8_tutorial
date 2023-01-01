@@ -370,12 +370,30 @@ $array2 = array_map(fn ($number) => $number * $number, [2, 2, 3, 3]);
 print_r($array2);
 
 
+/** Datetimes */
+
+date_default_timezone_set('Asia/Tbilisi');
 
 
+echo time(); // prints seconds seance 1970 
+echo "\n";
 
 
+$curentTime = time();
 
+# format date
+$today = date('Y-m-d', $curentTime);
+echo $today;
+echo "\n";
 
+# timezone
+echo date_default_timezone_get() . "\n";
+echo "\n";
+echo date('Y-m-d', strtotime('tomorrow + 10 month'));
+echo "\n";
+
+echo date("Y-m-d", strtotime('last day of february'));
+echo "\n";
 
 
 
