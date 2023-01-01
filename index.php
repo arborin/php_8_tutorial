@@ -395,6 +395,66 @@ echo "\n";
 echo date("Y-m-d", strtotime('last day of february'));
 echo "\n";
 
+/** ARRAYS */
+# array_chunk
+$items = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
+
+print_r(array_chunk($items, 2, true)); // 3th argument optional to keep keys
+
+# array combine
+
+$keys = ['a', 'b', 'c'];
+$vals = [1, 2, 3];
+
+print_r(array_combine($keys, $vals));
+
+
+# array filter 
+
+$ar = [1, 2, 3, 4, 5, 6, 7, 8];
+$even = array_filter($ar, fn ($num) => $num % 2 === 0);
+print_r($even);
+
+# reindexing values
+print_r(array_values($even));
+
+# remove false values
+$arr = array_filter([1, 2, [], false, '', 1]);
+print_r($arr);
+
+
+# array_map
+$arr = array_map(fn ($num) => $num * 3, [1, 2, 3, 4, 5]);
+print_r($arr);
+
+# array_merge
+print_r(array_merge([1, 2, 3], [2, 3, 4], [3, 4, 1]));
+
+# array_reduse
+$invoiceItems = [
+    ['price' => 9.0, 'qty' => 3, 'desc' => 'Item 1'],
+    ['price' => 10.0, 'qty' => 2, 'desc' => 'Item 2'],
+    ['price' => 4.8, 'qty' => 8, 'desc' => 'Item 4'],
+    ['price' => 7.8, 'qty' => 3, 'desc' => 'Item 5'],
+    ['price' => 8.0, 'qty' => 3, 'desc' => 'Item 11'],
+];
+
+$total = array_reduce($invoiceItems, fn ($sum, $item) => $sum + $item['qty'] * $item['price']);
+
+print_r($total);
+
+
+#array search
+echo "\n";
+$key = array_search('b', [1, 2, 3, 4, 'a', 'b']);
+
+print_r($key);
+echo "\n";
+
+# array desctuct
+$array = [1, 2, 3, 4];
+[$a, $b, $c, $d] = $array;
+
 
 
 
