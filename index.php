@@ -465,12 +465,21 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 
 
+/** ERROR HANDLING */
+
+error_reporting(E_ALL); // display all, 0 turn off
+trigger_error('Example error', E_USER_WARNING);
+
+function errorHandler(int $type, string $message, ?string $file = null, ?int $line = null)
+{
+    echo "$type # $message # $file # $line";
+    exit;
+}
 
 
+set_error_handler('errorHandler', E_ALL);
 
-
-
-
+echo $nika;
 
 
 
