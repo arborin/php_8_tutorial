@@ -456,7 +456,13 @@ $array = [1, 2, 3, 4];
 [$a, $b, $c, $d] = $array;
 
 
+/** php.ini */
 
+# error_reporting, error_log, display_errors
+
+var_dump(ini_get('error_reporting'));
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
 
 
 
