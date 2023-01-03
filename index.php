@@ -479,7 +479,50 @@ function errorHandler(int $type, string $message, ?string $file = null, ?int $li
 
 set_error_handler('errorHandler', E_ALL);
 
-echo $nika;
+// echo $nika;
+
+echo "\n";
+
+
+/** File System */
+
+$dir = scandir(__DIR__);
+
+print_r($dir);
+
+
+// mkdir('app'); // create directory
+// rmdir('app'); // remove directory
+
+
+if (!file_exists('foo.txt')) {
+    echo "Not exists\n";
+} else {
+    $file = fopen('foo.txt', 'r');
+
+    while (($line = fgets($file)) !== false) {
+        print_r($line);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
